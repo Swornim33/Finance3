@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Expert</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="finance-removebg-preview.png" alt="Finance Expert Logo">
+            <span>Finance Expert</span>
+        </div>        
+        <nav>
+            <ul>
+                <li><a href="#loans">Loans</a></li>
+                <li><a href="#insurance">Insurance</a></li>
+                <li><a href="#credit-cards">Credit Cards</a></li>
+                <li><a href="#investing">Investing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="loans">
+        <h2>Loans</h2>
+        <p>Explore the best loan options for your needs. Whether you're looking for personal loans, home loans, or student loans, we have the right options for you.</p>
+        <button onclick="showLoanCalculator()">Loan Calculator</button>
+    </section>
+
+    <section id="insurance">
+        <h2>Insurance</h2>
+        <p>Find the perfect insurance plan for your health, home, car, and more. Protect your future with the best coverage options.</p>
+    </section>
+
+    <section id="credit-cards">
+        <h2>Credit Cards</h2>
+        <p>Browse the best credit cards available today. Whether you're looking for rewards, cashback, or low interest rates, we have the options for you.</p>
+    </section>
+
+    <section id="investing">
+        <h2>Investing</h2>
+        <p>Learn how to invest wisely in stocks, bonds, and real estate. Get expert advice and tools to grow your wealth.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Finance Expert | All Rights Reserved</p>
+    </footer>
+
+    <div id="loan-calculator" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeLoanCalculator()">&times;</span>
+            <h3>Loan Calculator</h3>
+            <label for="loan-amount">Loan Amount ($):</label>
+            <input type="number" id="loan-amount" min="1000" max="1000000">
+            <label for="loan-term">Loan Term (years):</label>
+            <input type="number" id="loan-term" min="1" max="30">
+            <label for="interest-rate">Interest Rate (%):</label>
+            <input type="number" id="interest-rate" min="0" max="100">
+            <button onclick="calculateLoan()">Calculate</button>
+            <div id="loan-result"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
